@@ -6,7 +6,7 @@ export var speed = 500
 func start_at(dir, pos, v):
     rotation = dir
     position = pos
-    velocity = v + Vector2(0, -speed).rotated(90)
+    velocity = v + Vector2(speed, 0).rotated(rotation)
 
 func _process(delta):
     position = position + velocity * delta
