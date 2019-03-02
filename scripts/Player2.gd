@@ -34,5 +34,5 @@ func shoot():
     gun_timer.start()
     var b1 = bullet.instance()
     bullet_container.add_child(b1)
-    b1.start_at(rotation, get_node("muzzle").get_global_position(), velocity)
+    b1.start_at(rotation - 1.2, get_node("muzzle").get_global_position(), velocity)
 
