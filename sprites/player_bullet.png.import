@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pistol_person_pete.png-64819e775675ae26581976bdc5a6fda1.stex"
+path="res://.import/player_bullet.png-452ed57dd2ad0c5d1641ec91d0dede8c.stex"
 
 [deps]
 
-source_file="res://sprites/pistol_person_pete.png"
-dest_files=[ "res://.import/pistol_person_pete.png-64819e775675ae26581976bdc5a6fda1.stex" ]
+source_file="res://sprites/player_bullet.png"
+dest_files=[ "res://.import/player_bullet.png-452ed57dd2ad0c5d1641ec91d0dede8c.stex" ]
 
 [params]
 

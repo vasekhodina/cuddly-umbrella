@@ -7,10 +7,7 @@ path="res://.import/coachgun_citizen_carlos.png-4fe43177367b99fe3bde7c71351d8eb9
 [deps]
 
 source_file="res://sprites/coachgun_citizen_carlos.png"
-source_md5="8157c25222adef956ee19872a30c3a07"
-
 dest_files=[ "res://.import/coachgun_citizen_carlos.png-4fe43177367b99fe3bde7c71351d8eb9.stex" ]
-dest_md5="e9f92cfad172c2481bc16e138c6357ca"
 
 [params]
 
