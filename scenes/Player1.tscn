@@ -19,6 +19,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 SPEED = 450
 ROTATION_SPEED = 2.5
+MUZZLE_DEVIATION = 0.25
 bullet = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="." index="0"]

@@ -2,11 +2,13 @@ extends KinematicBody2D
 
 export (int) var SPEED
 export (float) var ROTATION_SPEED
+export (float) var MUZZLE_DEVIATION
 var screensize
 var velocity = Vector2()
 export (PackedScene) var bullet
 onready var bullet_container = get_node("bullet_container")
 onready var gun_timer = get_node("gun_timer")
+
 
 
 func _ready():
@@ -35,8 +37,8 @@ func shoot():
     gun_timer.start()
     var b1 = bullet.instance()
     bullet_container.add_child(b1)
-    b1.start_at(rotation, get_node("muzzle_1").get_global_position(), velocity)
+    b1.start_at(rotation - 0.25, get_node("muzzle_1").get_global_position(), velocity)
     var b2 = bullet.instance()
     bullet_container.add_child(b2)
-    b2.start_at(rotation, get_node("muzzle_2").get_global_position(), velocity)
+    b2.start_at(rotation + 0.25, get_node("muzzle_2").get_global_position(), velocity)
     
