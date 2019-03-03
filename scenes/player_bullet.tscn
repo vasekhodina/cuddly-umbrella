@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 23.8724
+radius = 23.4621
 
 [node name="player_bullet" type="Area2D"]
 
@@ -27,5 +27,16 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+
+[node name="lifetime" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 7.0
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_player_bullet_body_entered"]
+
+[connection signal="timeout" from="lifetime" to="." method="_on_lifetime_timeout"]
 
 

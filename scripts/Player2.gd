@@ -8,6 +8,7 @@ export (PackedScene) var bullet
 onready var bullet_container = get_node("bullet_container")
 onready var gun_timer = get_node("gun_timer")
 
+signal p2_lost
 
 func _ready():
     # Called every time the node is added to the scene.
@@ -39,5 +40,8 @@ func shoot():
     for i in range(0, 4):
         bullets.append(bullet.instance())
         bullet_container.add_child(bullets[i])
-        bullets[i].start_at(rotation - (0.9 + (i/10)), get_node("muzzle").get_global_position(), velocity)
+        bullets[i].start_at(rotation - 0.9 + float(i)/10, get_node("muzzle").get_global_position(), velocity)
 
+func on_hit():
+    hide()
+    emit_signal("p2_lost")

@@ -17,7 +17,7 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-SPEED = 450
+SPEED = 350
 ROTATION_SPEED = 2.5
 MUZZLE_DEVIATION = null
 bullet = ExtResource( 2 )
@@ -44,12 +44,12 @@ autostart = false
 
 [node name="muzzle_1" type="Position2D" parent="." index="4"]
 
-position = Vector2( 32.6143, -30.6933 )
+position = Vector2( 38.4541, -35.6571 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="muzzle_2" type="Position2D" parent="." index="5"]
 
-position = Vector2( 34.7607, 34.7715 )
+position = Vector2( 39.1405, 37.6914 )
 _sections_unfolded = [ "Transform" ]
 
 

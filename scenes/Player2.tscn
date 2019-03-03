@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 radius = 28.5601
 
-[node name="Player2" type="KinematicBody2D" index="0"]
+[node name="Player2" type="KinematicBody2D"]
 
 rotation = 3.14159
 input_pickable = false
@@ -17,7 +17,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-SPEED = 450
+SPEED = 350
 ROTATION_SPEED = 2.5
 bullet = ExtResource( 2 )
 
@@ -34,7 +34,7 @@ shape = SubResource( 1 )
 
 [node name="muzzle" type="Position2D" parent="." index="2"]
 
-position = Vector2( 25.1111, -24.527 )
+position = Vector2( 40.5699, -43.3153 )
 
 [node name="gun_timer" type="Timer" parent="." index="3"]
 
