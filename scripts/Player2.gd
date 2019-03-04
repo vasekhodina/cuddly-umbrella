@@ -5,8 +5,10 @@ export (float) var ROTATION_SPEED
 var screensize
 var velocity = Vector2()
 export (PackedScene) var bullet
+var dead = false
 onready var bullet_container = get_node("bullet_container")
 onready var gun_timer = get_node("gun_timer")
+onready var anim = get_node("AnimationPlayer")
 
 signal p2_lost
 
@@ -14,6 +16,7 @@ func _ready():
     # Called every time the node is added to the scene.
     # Initialization here
     screensize = get_viewport_rect().size
+    
 
 func _process(delta):
     velocity = Vector2()
@@ -30,6 +33,8 @@ func _process(delta):
         shoot()
     rotation += rotation_dir * ROTATION_SPEED * delta
     move_and_slide(velocity)
+    if dead and not anim.is_playing():
+        hide()
 	
 func shoot():
     gun_timer.start()
@@ -43,5 +48,6 @@ func shoot():
         bullets[i].start_at(rotation - 0.9 + float(i)/10, get_node("muzzle").get_global_position(), velocity)
 
 func on_hit():
-    hide()
+    anim.play("Death")
+    dead = true
     emit_signal("p2_lost")

@@ -65,7 +65,7 @@ extents = Vector2( 19.3395, 65.3369 )
 custom_solver_bias = 0.0
 points = PoolVector2Array( 0, -60, 35, 5, -35, 5 )
 
-[node name="Main" type="Node" index="0"]
+[node name="Main" type="Node"]
 
 [node name="BG" type="Sprite" parent="." index="0"]
 
