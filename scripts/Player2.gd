@@ -37,15 +37,15 @@ func _process(delta):
         hide()
 	
 func shoot():
+    # TODO: Fix weird shotgun bullet spawning. Maybe drop weird angles at all.
     gun_timer.start()
-    #var b1 = bullet.instance()
-    #bullet_container.add_child(b1)
-    #b1.start_at(rotation - 1.2, get_node("muzzle").get_global_position(), velocity)
     var bullets = Array()
     for i in range(0, 4):
         bullets.append(bullet.instance())
         bullet_container.add_child(bullets[i])
-        bullets[i].start_at(rotation - 0.9 + float(i)/10, get_node("muzzle").get_global_position(), velocity)
+        bullets[i].start_at(rotation - 0.8 + float(i)/10,
+                            get_node("muzzle").get_global_position() + Vector2(20 * i, 4 * i).rotated(rotation),
+                            velocity)
 
 func on_hit():
     anim.play("Death")
