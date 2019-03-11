@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal p2_lost
+
 export (int) var SPEED
 export (float) var ROTATION_SPEED
 var screensize
@@ -8,9 +10,7 @@ export (PackedScene) var bullet
 var dead = false
 onready var bullet_container = get_node("bullet_container")
 onready var gun_timer = get_node("gun_timer")
-onready var anim = get_node("AnimationPlayer")
-
-signal p2_lost
+onready var anim = get_node("Death")
 
 func _ready():
     # Called every time the node is added to the scene.

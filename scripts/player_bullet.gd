@@ -10,10 +10,15 @@ func start_at(dir, pos, v):
 
 func _process(delta):
     var collision = move_and_collide(velocity * delta)
+    var collider = null
     if collision:
         var reflect = collision.remainder.bounce(collision.normal)
         velocity = velocity.bounce(collision.normal)
         move_and_collide(reflect)
+        collider = collision.get_collider()
+    if collider:
+        collider.on_hit()
+        queue_free()
 
 func _on_lifetime_timeout():
     queue_free()
